@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     : "You are the DocuAI Support Assistant. Your primary purpose is to help users successfully create and convert documents using the DocuAI platform. Keep your answers concise, helpful, and focused on document conversion, OCR, formatting, and exporting to PDF/Word. Do not behave like a general-purpose AI.";
 
   const result = await streamText({
-    model: openai('gpt-4o-mini'),
+    model: openai('gpt-4o-mini') as any,
     messages,
     system: systemPrompt,
   });

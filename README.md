@@ -1,3 +1,5 @@
+![DocuAI Banner](./public/banner.jpg)
+
 # DocuAI
 
 DocuAI is a next-generation SaaS platform that leverages Artificial Intelligence and Optical Character Recognition (OCR) to seamlessly convert raw text and physical images into professionally formatted PDF and Word documents.
@@ -90,3 +92,4 @@ Contributions are what make the open-source community such an amazing place to l
 ## 📝 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
