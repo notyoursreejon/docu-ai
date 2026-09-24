@@ -2,8 +2,6 @@
 
 import { useEditor, EditorContent, BubbleMenu } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
-import { useEditor, EditorContent, BubbleMenu } from '@tiptap/react'
-import StarterKit from '@tiptap/starter-kit'
 import Heading from '@tiptap/extension-heading'
 import Image from '@tiptap/extension-image'
 import Table from '@tiptap/extension-table'
