@@ -23,7 +23,7 @@ export async function generatePDF(htmlContent: string): Promise<Buffer> {
     </html>
   `;
 
-  await page.setContent(wrappedHtml, { waitUntil: 'networkidle0' });
+  await page.setContent(wrappedHtml, { waitUntil: 'networkidle0' as any });
   
   const pdfBuffer = await page.pdf({
     format: 'A4',

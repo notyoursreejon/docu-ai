@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     }
 
     const { text: result } = await generateText({
-      model: openai('gpt-4o-mini'),
+      model: openai('gpt-4o-mini') as any,
       system: "You are an AI writing assistant inside a document editor. The user wants you to modify their selected text. Return ONLY the newly modified text without any markdown wrappers or quotes, as it will be directly injected back into their document.",
       prompt: `Instruction: ${prompt}\n\nSelected Text:\n${text}`,
     });
