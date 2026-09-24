@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { FileImage, Github } from "lucide-react"
+import { FileImage } from "lucide-react"
 
 export default function RegisterPage() {
   return (
@@ -43,8 +43,8 @@ export default function RegisterPage() {
               </div>
             </div>
             
-            <Button variant="outline" className="w-full flex items-center gap-2">
-              <Github className="h-4 w-4" /> Github
+            <Button variant="outline" className="w-full flex items-center justify-center gap-2">
+              GitHub
             </Button>
           </div>
           

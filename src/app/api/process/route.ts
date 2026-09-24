@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { performOCR } from '@/services/ai/ocr';
-import { formatDocumentWithAI } from '@/services/ai/formatter';
+import { extractTextFromImage } from '@/services/ai/ocr';
+import { formatRawTextToHTML } from '@/services/ai/formatter';
 
 export async function POST(req: Request) {
   try {
@@ -11,10 +11,10 @@ export async function POST(req: Request) {
     }
 
     // 1. Perform OCR
-    const rawText = await performOCR(imageBase64);
+    const rawText = await extractTextFromImage(imageBase64);
 
     // 2. Format with AI to generate HTML
-    const formattedHtml = await formatDocumentWithAI(rawText);
+    const formattedHtml = await formatRawTextToHTML(rawText);
 
     return NextResponse.json({ html: formattedHtml });
   } catch (error) {
